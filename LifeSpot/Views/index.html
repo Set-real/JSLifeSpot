@@ -3,39 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>LifeSpot</title>
-    <!--Подключение стилей по отностиельному пути из внешнего файла-->
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
-    <script>
-        let yers = prompt("Сколько вам лет?", "")
 
-        if (yers >= 18) {
-            
-            alert("Приветствуем на LifeSpot! " + new Date().toLocaleString());
-        }
-        else {
-            alert("Наш сайт только для посещения совершеннолетними!")
-            window.location.href = "http://www.google.com"
-        }
+    <!-- Внешний скрипт с функциями -->
+    <script type="text/javascript" src="../Static/JS/index.js"></script>
+
+    <!-- Внутренний скрипт с вызовами функций -->
+    <script>
+        handleSession();
     </script>
+
 </head>
 
-<!--Хедер страницы находится над тегом body-->
 <header id="header-index">
-    <!--Заголовок страницы-->
     <h1>LifeSpot - прямые трансляции с улиц</h1>
-    <!--Параграф-->
     <p>Покажем, что происходит прямо сейчас</p>
-
-    <input type="text" size=50%>
+    <input type="text" oninput="filterContent() /* Вызов функции */" size=50%>
 </header>
 
-<!--Сайд-бар страницы (пока все ссылки ведут на главную)-->
-<aside id="sidebar">
-    <div class="navbar">
-        <a href="/"><p>Все трансляции</p></a>
-        <a href="/"><p>О проекте</p></a>
-    </div>
-</aside>
+<header>
+    <!--Сайд-бар страницы (пока все ссылки ведут на главную)-->
+    <!--SIDEBAR-->
+</header>
 
 <body>
     <div class="bordered">
@@ -55,8 +44,6 @@
 </body>
 
 <!--Футер страницы находится под основной частью (body)-->
-<footer>
-    <p>LifeSpot - видео трансляции</p>
-    <p>Связь с разработчиком: evmorgunov@yahoo.com</p>
-</footer>
+<!--FOOTER-->
+
 </html>
