@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using static LifeSpot.Logger;
 
 namespace LifeSpot
 {
@@ -7,6 +8,7 @@ namespace LifeSpot
     {
         public static void Main(string[] args)
         {
+            PrintMassage((() => Info("Запускаем приложение")));
             CreateHostBuilder(args).Build().Run();
         }
 

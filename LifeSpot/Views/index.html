@@ -10,11 +10,22 @@
 
     <!-- Внутренний скрипт с вызовами функций -->
     <script>
-        // Создадим и обработаем сессию
-        let session = handleSession();
+        // Проверка на возраст
+        checkAge();
 
-        // Логируем в консоль.
-        sessionLog(session)
+        // сохранение сессии
+        handleSession()
+
+        // вывод данных сессии в консоль
+        sessionLog();
+
+        // вызов функции с просьбой подписаться на социальные сети
+        sotialNetwork();
+
+        // функция для получения пользовательского ввода
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
     </script>
 
 </head>
@@ -22,10 +33,11 @@
 <header id="header-index">
     <h1>LifeSpot - прямые трансляции с улиц</h1>
     <p>Покажем, что происходит прямо сейчас</p>
-    <input type="text" oninput="filterContent(document.getElementsByTagName('input')[0].value.toLowerCase()/*Аргумент - значение введенное пользователем*/)" size=50%>
+    <input type="text" oninput="
+    // Вызов (функция в аргумент передаётся без круглых скобок)
+    filterContent( inputParseFunction )
+    " size=50%>
 </header>
-
-<header>
     <!--Сайд-бар страницы (пока все ссылки ведут на главную)-->
     <!--SIDEBAR-->
 </header>
