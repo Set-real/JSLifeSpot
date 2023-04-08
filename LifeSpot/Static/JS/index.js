@@ -20,9 +20,9 @@ function handleSession() {
  * Проверяем возраст пользователя
  * 
  * */
-function chackAge() {
+function checkAge() {
 
-    session.set('age', prompt("Пожалуйства введите ваш возраст"));
+    session.get('age', prompt("Пожалуйства введите ваш возраст"));
 
     if (session.set('age') >= 18) {
         alert("Приветствуем на LifeSpot! " + '\n' + "Текущее время: " + new Date().toLocaleString());
@@ -61,4 +61,4 @@ function filterContent() { // в этот параметр будет перед
 }
 const sotialNetwork = setTimeout(function () {
     alert("Подпишитесь на наши социальные сети!")
-}, 2000);
+}, 60000);
